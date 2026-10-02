@@ -2,74 +2,78 @@
    Свой ArialN: положите assets/fonts/ArialN.woff2 и раскомментируйте:
 @font-face{font-family:'ArialN';src:url('assets/fonts/ArialN.woff2') format('woff2');font-display:swap}
 */
-:root{--milk:#FAF8F5;--graphite:#2E3033;--black:#0A0A0A;--plat:#F2EFE9;--beige:#D4C3BA;--violet:#5D00FF;--lime:#C6FF34;
+:root{--milk:#FAF8F5;--graphite:#2E3033;--black:#0A0A0A;--plat:#F2EFE9;--beige:#D4C3BA;--lime:#C6FF34;
 --head:'ArialN','Archivo Narrow','Arial Narrow',sans-serif;--body:'Montserrat',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--milk);color:var(--graphite);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:var(--body);background:var(--milk);color:var(--graphite);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
-h1,h2,h3{font-family:var(--head);font-weight:500;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
-.wrap{max-width:960px;margin:0 auto;padding:88px 22px 0}
-h2{font-size:clamp(1.8rem,6vw,2.6rem);margin-bottom:32px;color:var(--black)}
-h3{font-size:1.25rem;margin-bottom:6px;color:var(--black)}
-.muted,.sub{color:#6b6b6b}.sub{max-width:520px;margin-bottom:24px}
-
-.top{position:fixed;inset:0 0 auto 0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;color:var(--milk);mix-blend-mode:difference}
-.wordmark{font-family:Georgia,serif;font-size:1.4rem;letter-spacing:.01em}
-.top a{text-decoration:none;font-size:.8rem;border-bottom:1px solid currentColor}
-
-.hero{position:relative;height:100svh;min-height:520px;background:var(--black);overflow:hidden}
-.hero img{width:100%;height:100%;object-fit:cover;opacity:.8}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(10,10,10,.75))}
-.hero-text{position:absolute;z-index:2;left:22px;right:22px;bottom:44px;color:var(--milk);max-width:960px;margin:0 auto}
-.hero h1{font-size:clamp(2.6rem,12vw,6.5rem);margin-bottom:14px}
-.hero p{margin-bottom:22px;opacity:.9}
-.link-light{display:inline-block;color:inherit;font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px;transition:opacity .25s}
-.link-light:hover{opacity:.6}
-
-.intro{max-width:680px}.intro p+p{margin-top:14px}
-
-.rows{list-style:none;border-top:1px solid var(--beige)}
-.rows li{padding:26px 0;border-bottom:1px solid var(--beige)}
-#bonuses .rows li{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:start}
-.big{font-family:var(--head);font-size:2.4rem;line-height:1;color:var(--violet)}
-.note{margin-top:32px;padding:22px 24px;background:var(--plat);border-left:3px solid var(--lime)}
-.note p{font-size:.88rem}
-
-.space-grid{display:grid;gap:24px}
-.space-grid img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.links{margin-top:16px;display:flex;gap:22px}
-.links a,.team a,.plain a{font-weight:500;text-decoration:none;border-bottom:1px solid var(--graphite);padding-bottom:2px;transition:color .25s,border-color .25s}
-.links a:hover,.team a:hover,.plain a:hover{color:var(--violet);border-color:var(--violet)}
-.team li{display:grid;gap:8px;justify-items:start}
-.plain li{padding:0}.plain a{display:block;border:0;padding:20px 0;font-family:var(--head);font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em}
-
-.partners{margin-top:88px;background:var(--black);color:var(--milk);padding-bottom:88px}
+:focus-visible{outline:2px solid var(--black);outline-offset:3px}
+h1,h2,h3,h4,.big{font-family:var(--head);font-weight:500;text-transform:uppercase;letter-spacing:.02em;line-height:1;color:var(--black)}
+.wrap{max-width:960px;margin:0 auto;padding:72px 22px 0}
+h2{font-size:clamp(1.6rem,5.5vw,2.3rem);margin-bottom:26px}
+h3{font-size:1.15rem;margin-bottom:6px}
+h4{font-size:1rem;margin:8px 0 4px}
+.sub{color:#6b6b6b;max-width:520px;margin-bottom:20px}
+ 
+/* HERO */
+.hero{padding-top:22px;padding-bottom:0}
+.wordmark{display:block;font-family:Georgia,serif;font-size:1.3rem;margin-bottom:56px}
+.hero h1{font-size:clamp(1.5rem,7.2vw,4rem);white-space:nowrap;margin-bottom:12px}
+.lead{margin-bottom:26px}
+.hero-img{width:min(100%,300px);aspect-ratio:1/1;object-fit:contain;margin-bottom:26px}
+.hero-partners{display:flex;align-items:center;gap:10px;margin-bottom:26px;flex-wrap:wrap}
+.hero-partners span{font-size:.75rem;color:#6b6b6b;margin-right:6px}
+.logo-box{width:86px;height:56px;display:grid;place-items:center;overflow:hidden}
+.logo-box img,.p-logo img{width:100%;height:100%;object-fit:contain}
+.link{display:inline-block;font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;transition:opacity .25s}
+.link:hover{opacity:.55}
+.link.light{color:var(--milk)}
+ 
+.intro{padding-top:44px;max-width:620px;font-size:.78rem;color:#6b6b6b}
+.intro p+p{margin-top:8px}
+ 
+/* TEAM + BONUSES */
+.rows,.plain{list-style:none;border-top:1px solid var(--beige)}
+.rows li{padding:24px 0;border-bottom:1px solid var(--beige);display:grid;gap:20px}
+.who p{font-size:.85rem;margin-bottom:10px}
+.who a,.links a{font-weight:500;text-decoration:none;border-bottom:1px solid var(--graphite);padding-bottom:1px;transition:opacity .25s}
+.who a:hover,.links a:hover{opacity:.55}
+.big{font-size:2.4rem;display:block}
+.gift p{font-size:.85rem}
+.note{margin-top:22px;padding:14px 16px;background:var(--plat);border-left:2px solid var(--lime);font-size:.72rem;color:#555}
+.note b{font-weight:600;color:var(--black)}
+ 
+/* PARTNERS */
+.partners{margin-top:72px;background:var(--black);color:var(--milk);padding-bottom:72px}
 .partners h2,.partners h3{color:var(--milk)}
-.p-grid{display:grid;gap:44px}
-.p-logo{aspect-ratio:16/10;display:grid;place-items:center;margin-bottom:20px;overflow:hidden}
-.p-logo img{width:100%;height:100%;object-fit:contain}
-.partners p{opacity:.75;margin:6px 0 18px;font-size:.9rem}
-
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:26px}
+.p-grid{display:grid;gap:40px}
+/* Логотипы целиком: object-fit:contain. Рамка 4:3 — подходит под квадратные и широкие логотипы */
+.p-logo{aspect-ratio:4/3;display:grid;place-items:center;margin-bottom:18px;overflow:hidden}
+.partners p{opacity:.75;margin:6px 0 16px;font-size:.85rem}
+ 
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:22px}
 .gallery img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.btn{display:inline-block;background:var(--black);color:var(--milk);text-decoration:none;font-weight:500;padding:15px 30px;transition:background .25s,color .25s}
-.btn:hover{background:var(--violet)}
-
-footer{margin-top:88px;background:var(--black);color:rgba(250,248,245,.55);padding:48px 22px;text-align:center;font-size:.72rem}
-footer img{width:110px;margin:0 auto 18px}
+.btn{display:inline-block;background:var(--black);color:var(--milk);text-decoration:none;font-weight:500;padding:14px 28px;transition:opacity .25s}
+.btn:hover{opacity:.7}
+ 
+.space-grid{display:grid;gap:20px}
+.space-grid img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.space-grid p{font-size:.85rem}
+.links{margin-top:14px;display:flex;gap:22px}
+ 
+.plain a{display:block;text-decoration:none;padding:18px 0;border-bottom:1px solid var(--beige);font-family:var(--head);font-size:1.4rem;text-transform:uppercase;letter-spacing:.02em;transition:padding .25s}
+.plain a:hover{padding-left:8px}
+ 
+footer{margin-top:72px;background:var(--black);color:rgba(250,248,245,.55);padding:44px 22px;text-align:center;font-size:.7rem}
+footer img{width:110px;margin:0 auto 16px}
 footer p{max-width:440px;margin:0 auto}
-
-.js .hero-text{animation:in 1s .2s both}
-@keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+ 
 @media(min-width:760px){
- .wrap{padding-top:120px}
- #bonuses .rows li{grid-template-columns:200px 1fr}
- .big{font-size:3.4rem}
- .space-grid{grid-template-columns:1.1fr 1fr;align-items:end;gap:48px}
+ .wrap{padding-top:104px}.hero{padding-top:28px}
+ .rows li{grid-template-columns:1.2fr 1fr;gap:48px}
  .p-grid{grid-template-columns:1fr 1fr}
- .team li{grid-template-columns:200px 1fr auto;align-items:baseline;gap:24px}
+ .space-grid{grid-template-columns:1.1fr 1fr;align-items:end;gap:48px}
 }
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
